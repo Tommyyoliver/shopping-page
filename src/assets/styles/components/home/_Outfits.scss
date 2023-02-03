@@ -1,0 +1,119 @@
+@import "../../variables";
+
+.home-img-container {
+    width: 100vw;
+    height: 100vh;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
+.outfits {
+
+    .outfits-title {
+        text-align: center;
+        margin: 30px;
+        h3 {
+            font-size: 1.8rem;
+            color: $primary-color;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+    }
+    .section-container {
+        width: 100%;
+        height: min-content;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+
+        .section-outfit {
+            box-shadow: 0px 0px 10px 0px #d1d1d1;
+            padding: 10px;
+            width: 70vw;
+            max-width: 350px;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            margin: 20px auto;
+            background-size: contain;
+            cursor: pointer;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            label {
+                font-size: 1.2rem;
+                font-weight: bold;
+                padding: 10px;
+                overflow-y: hidden;
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    .outfits {
+
+        .outfits-title {
+            margin: 40px;
+            h3 {
+                font-size: 2.8rem;
+                font-weight: 900;
+            }
+        }
+        .section-container {
+            width: 100%;
+            height: min-content;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background-color: $white;
+    
+            .section-outfit {
+                padding: 20px;
+                width: 70vw;
+                max-width: 450px;
+                justify-content: space-around;
+                margin: 40px auto;
+                
+                img {
+                    object-position: center;
+                }
+                label {
+                    font-size: 1.5rem;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+
+}
+@media (min-width: 1200px) {
+    .outfits {
+
+        .section-container {
+    
+            .section-outfit {
+                max-width: 350px;
+                
+                img {
+                    object-position: center;
+                }
+            }
+        }
+    }
+}

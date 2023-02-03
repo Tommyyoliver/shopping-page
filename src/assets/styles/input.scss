@@ -1,0 +1,33 @@
+@import "./variables";
+
+* {
+    font-family: sans-serif, Arial, Helvetica;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none
+}
+
+button {
+    cursor: pointer;
+}
+
+@import "./components/home/Home";
+@import "./components/home/Navbar";
+@import "./components/home/Outfits";
+@import "./components/home/Shoes";
+@import "./components/home/AllOutfit";
+@import "./components/home/Shop";
+@import "./components/home/Footer";
+
+@import "./components/clothing/man/Man";
+@import "./components/clothing/women/Women";
+@import "./components/clothing/kid/Kid";
+
+@import "./components/clothing/beach/BeachMan";
+@import "./components/clothing/beach/BeachWomen";
+
+@import "./components/clothing/accessories/Accessories";

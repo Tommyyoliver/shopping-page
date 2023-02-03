@@ -1,0 +1,113 @@
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        
+        .menu-container {
+            margin: 10px;
+            width: 30px;
+            height: 30px;
+            z-index: 500;
+            position: absolute;
+
+            img {
+                filter: invert(1);
+                cursor: pointer;
+            }
+        }
+        h2 {
+            margin-left: 10px;
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            white-space: nowrap;
+            position: absolute;
+            overflow-y: hidden;
+            transform: translate(20px, 40px);
+        }
+        h2::before {
+            content: "ROPA OLI";
+            position: absolute;
+            color: $background-text;
+            transform: translate(2.6px, 2.2px);
+        }
+    }
+    .handleMenu-container {
+        width: 100vw;
+        height: 100vh;
+        background-color: $primary-color;
+        z-index: 300;
+        transition: all .3s;
+        box-shadow: inset 0px 0px 10px 10px $secondary-color;
+
+        ul {
+            height: min-content;
+            width: min-content;
+            margin: auto;
+            li {
+                text-align: center;
+                font-size: 2rem;
+                margin: 20px 0;
+                color: $background-text;
+                font-weight: 900;
+                text-transform: uppercase;
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+            li:hover {
+                background-color: $secondary-color;
+                box-shadow: 0px 0px 10px 4px $secondary-color;
+            }
+        }
+    }
+    .handle {
+        opacity: 0;
+        transform: translate(-100vw, -200vh);
+    }
+}
+
+@media (min-width: 700px) {
+    .navbar-container {
+
+        div {
+            
+            .menu-container {
+                height: min-content;
+            }
+            h2 {
+                font-size: 5rem;
+            }
+            h2::before {
+                transform: translate(2.8px, 2.1px);
+            }
+        }
+    }   
+}
+
+@media (min-width: 1200px) {
+    .navbar-container {
+
+        div {
+
+            .menu-container {
+                margin: 20px;
+            }
+            
+            h2 {
+                font-size: 7rem;
+                margin-left: 50px;
+            }
+            h2::before {
+                transform: translate(3px, 2.5px);
+            }
+        }
+    }   
+}

@@ -1,0 +1,180 @@
+@import "../../variables";
+
+.allOutfit-container {
+    width: 100vw;
+    height: min-content;
+
+    h3 {
+        font-size: 2.6rem;
+        font-weight: 900;
+        overflow-y: hidden;
+        color: $primary-color;
+        margin: 10px 0px 0px 20px;
+    }
+
+    .stock-container {
+        .stock {
+            width: 90vw;
+            height: 70vh;
+            margin: 20px auto;
+            overflow-y: hidden;
+            border-radius: 5px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .stock-text {
+                z-index: 200;
+                position: absolute;
+                transform: translateY(-150px);
+                font-weight: 700;
+                margin-left: 20px;
+
+                h4 {
+                    font-size: 2rem;
+                    color: $background-text;
+                    position: relative;
+                    margin-bottom: 7px;
+                    overflow-y: hidden;
+                }
+                h4::before {
+                    content: "Accesorios";
+                    position: absolute;
+                    color: $primary-color;
+                    font-size: 2rem;
+                    transform: translate(.5px, .5px);
+                }
+                p {
+                    color: $background-text;
+                    font-size: 1.2rem;
+                    font-weight: 800;
+                    position: relative;
+                    margin-bottom: 15px;
+                    overflow-y: hidden;
+                }
+                p::before {
+                    content: "Las mejores combinaciones";
+                    position: absolute;
+                    color: $secondary-color;
+                    font-size: 1.2rem;
+                    font-weight: 800;
+                    transform: translate(.5px, .5px);
+                }
+                button {
+                    width: 120px;
+                    height: 40px;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: $white;
+                    color: $primary-color;
+                    font-size: 1rem;
+                    font-weight: 700;
+                }
+            }
+        }
+        .stock:nth-child(2) {
+
+            .stock-text {
+                h4::before {
+                    content: "Pileta, Playa y Sol";
+                    position: absolute;
+                    color: $primary-color;
+                    font-size: 2rem;
+                    transform: translate(.5px, .5px);
+                }
+                p::before {
+                    content: "Elegí el tuyo!";
+                    position: absolute;
+                    color: $secondary-color;
+                    font-size: 1.2rem;
+                    font-weight: 800;
+                    transform: translate(.5px, .5px);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    .allOutfit-container {
+        width: 100vw;
+        height: min-content;
+        margin-top: 100px;
+        
+        h3 {
+            font-size: 3.5rem;
+            margin: 10px 0px 0px 30px;
+        }
+    
+        .stock-container {
+            .stock {
+                width: 80vw;
+                height: 90vh;
+                margin: 60px auto;
+                border-radius: 10px;
+    
+                .stock-text {
+                    font-weight: 800;
+                    margin-left: 40px;
+                    transform: translate(0px, -250px);
+    
+                    h4 {
+                        font-size: 4rem;
+                        margin-bottom: 7px;
+                    }
+                    h4::before {
+                        font-size: 4rem;
+                        transform: translate(1px, 3px);
+                    }
+                    p {
+                        font-size: 2rem;
+                    }
+                    p::before {
+                        font-size: 2rem;
+                        font-weight: 800;
+                    }
+                    button {
+                        width: 180px;
+                        height: 60px;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .stock:nth-child(2) {
+    
+                .stock-text {
+                    transform: translate(0px, -250px);
+                    h4::before {
+                        font-size: 4rem;
+                        transform: translate(1px, 3px);
+                    }
+                    p::before {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .allOutfit-container {
+        
+        h3 {
+            font-size: 4rem;
+        }
+    
+        .stock-container {
+            display: flex;
+            flex-direction: row;
+            .stock {
+                max-width: 600px;
+                margin: 100px auto;
+                border-radius: 15px;
+            }
+        }
+    }
+}
